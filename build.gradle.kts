@@ -12,8 +12,6 @@ repositories {
     maven {
         url = uri("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
 
-        // As of Gradle 5.1, you can limit this to only those
-        // dependencies you expect from it
         content {
             includeGroup ("org.bukkit")
             includeGroup ("org.spigotmc")
