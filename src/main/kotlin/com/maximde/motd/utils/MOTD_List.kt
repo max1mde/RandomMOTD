@@ -4,12 +4,10 @@ import org.bukkit.configuration.file.YamlConfiguration
 import java.io.File
 import java.io.IOException
 
-object MotdList {
+object MOTD_List {
 
     var file = File("plugins/RandomMOTD", "motd-list.yml")
-
     var config: YamlConfiguration = YamlConfiguration.loadConfiguration(file)
-
 
     fun reloadFile() {
         config = YamlConfiguration.loadConfiguration(file)
@@ -37,7 +35,7 @@ object MotdList {
         return list
     }
 
-    fun saveConfig() {
+    private fun saveConfig() {
         try {
             config.save(file)
         } catch (e: IOException) {
@@ -45,6 +43,7 @@ object MotdList {
             e.printStackTrace()
         }
     }
+
     /**
      * MaximDe 2022.
      *

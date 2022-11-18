@@ -1,6 +1,6 @@
 package com.maximde.motd.events
 
-import com.maximde.motd.utils.MotdList
+import com.maximde.motd.utils.MOTD_List
 import org.bukkit.event.EventHandler
 import org.bukkit.event.EventPriority
 import org.bukkit.event.Listener
@@ -14,13 +14,10 @@ class ServerPing : Listener {
 
     @EventHandler(priority = EventPriority.HIGH)
     fun onServerPing(event: ServerListPingEvent) {
-        Thread {
-            MotdList.reloadFile()
-        }.start()
-        motd_list = MotdList.getMOTDList()
+        motd_list = MOTD_List.getMOTDList()
         try {
             if(motd_list.isEmpty()) {
-                motd_list = MotdList.getMOTDList()
+                motd_list = MOTD_List.getMOTDList()
             }
             val max = motd_list.size
             if(max != 0) {
@@ -30,6 +27,11 @@ class ServerPing : Listener {
         } catch (ex: IndexOutOfBoundsException) {
             ex.printStackTrace()
         }
+
+        //Update config file
+        Thread {
+            MOTD_List.reloadFile()
+        }.start()
     }
 
     /**

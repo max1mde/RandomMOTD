@@ -1,7 +1,7 @@
 package com.maximde.motd
 
 import com.maximde.motd.events.ServerPing
-import com.maximde.motd.utils.MotdList
+import com.maximde.motd.utils.MOTD_List
 import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
 
@@ -9,12 +9,8 @@ import org.bukkit.plugin.java.JavaPlugin
 class RandomMOTD : JavaPlugin() {
 
     override fun onEnable() {
-        MotdList.setupList()
+        MOTD_List.setupList()
         Bukkit.getPluginManager().registerEvents(ServerPing(), this)
-    }
-
-    override fun onDisable() {
-
     }
 
     /**
