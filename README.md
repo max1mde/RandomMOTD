@@ -18,5 +18,5 @@ MOTD:
 - Copy the jar file in your _server/plugins_ folder
 - Restart your Minecraft server
 
-**You can change (and add) now the motd list in _plugins/RandomMOTD/motd-list.yml_
+**You can change (and add) now the motd list in _plugins/RandomMOTD/motd-list.yml_**
 
