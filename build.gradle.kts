@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.maximde"
-version = "1.0-Alpha"
+version = "0.0.2"
 
 tasks.withType<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar> {
     archiveFileName.set("RandomMOTD.jar")

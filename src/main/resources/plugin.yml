@@ -1,4 +1,4 @@
 name: RandomMOTD
-version: 0.0.1
+version: 0.0.2
 main: com.maximde.motd.RandomMOTD
 author: MaximDe
