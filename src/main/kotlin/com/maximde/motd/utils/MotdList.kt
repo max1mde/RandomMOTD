@@ -1,7 +1,6 @@
-package com.maximde.randommotd.utils
+package com.maximde.motd.utils
 
 import org.bukkit.configuration.file.YamlConfiguration
-import org.bukkit.entity.Player
 import java.io.File
 import java.io.IOException
 
@@ -11,6 +10,7 @@ object MotdList {
 
     var config: YamlConfiguration = YamlConfiguration.loadConfiguration(file)
 
+
     fun reloadFile() {
         config = YamlConfiguration.loadConfiguration(file)
     }
@@ -18,8 +18,8 @@ object MotdList {
     fun setupList() {
         if(!config.isSet("MOTD")) {
             config.set("MOTD.1", "Example MOTD 1");
-            config.set("MOTD.1", "Example MOTD 2");
-            config.set("MOTD.1", "Example MOTD 3");
+            config.set("MOTD.2", "§cExample MOTD 2");
+            config.set("MOTD.3", "§6Example MOTD 3");
             saveConfig();
         }
     }
@@ -27,11 +27,13 @@ object MotdList {
     fun getMOTDList() : ArrayList<String> {
         val cs = config.getConfigurationSection("MOTD")!!
         var list: ArrayList<String> = ArrayList()
-        if (cs.isSet("MOTD")) {
+        if(config.isSet("MOTD")) {
             for (key in cs.getKeys(false)) {
-                config.getString("MOTD.$key")?.let { list.add(it) }
+                list.add(config.getString("MOTD." + key)!!)
             }
+            return list
         }
+        System.out.println("[RandomMOTD] Error! List file is empty!")
         return list
     }
 

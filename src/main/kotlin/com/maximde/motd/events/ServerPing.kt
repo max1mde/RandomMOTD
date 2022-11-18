@@ -1,6 +1,6 @@
-package com.maximde.randommotd.events
+package com.maximde.motd.events
 
-import com.maximde.randommotd.utils.MotdList
+import com.maximde.motd.utils.MotdList
 import org.bukkit.event.EventHandler
 import org.bukkit.event.EventPriority
 import org.bukkit.event.Listener
@@ -10,17 +10,23 @@ import java.util.concurrent.ThreadLocalRandom
 
 class ServerPing : Listener {
 
-    var list = ArrayList<String>()
+    var motd_list = ArrayList<String>()
 
     @EventHandler(priority = EventPriority.HIGH)
     fun onServerPing(event: ServerListPingEvent) {
+        Thread {
+            MotdList.reloadFile()
+        }.start()
+        motd_list = MotdList.getMOTDList()
         try {
-            if(list.isEmpty()) {
-                list = MotdList.getMOTDList()
+            if(motd_list.isEmpty()) {
+                motd_list = MotdList.getMOTDList()
             }
-            val max = list.size
-            val message: Int = ThreadLocalRandom.current().nextInt(max)
-            event.motd = list[message]
+            val max = motd_list.size
+            if(max != 0) {
+                val message: Int = ThreadLocalRandom.current().nextInt(max)
+                event.motd = motd_list[message]
+            }
         } catch (ex: IndexOutOfBoundsException) {
             ex.printStackTrace()
         }

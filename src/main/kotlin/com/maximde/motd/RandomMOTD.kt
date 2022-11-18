@@ -1,7 +1,7 @@
-package com.maximde.randommotd
+package com.maximde.motd
 
-import com.maximde.randommotd.events.ServerPing
-import com.maximde.randommotd.utils.MotdList
+import com.maximde.motd.events.ServerPing
+import com.maximde.motd.utils.MotdList
 import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
 
