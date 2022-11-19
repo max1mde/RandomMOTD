@@ -1,4 +1,4 @@
-package configuration.file;
+package com.maximde.motd.configuration.file;
 
 import org.apache.commons.lang3.Validate;
 

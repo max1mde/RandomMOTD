@@ -1,4 +1,4 @@
-package configuration.file;
+package com.maximde.motd.configuration.file;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,9 +8,9 @@ import java.io.Reader;
 import java.util.Map;
 import java.util.logging.Level;
 
-import configuration.Configuration;
-import configuration.ConfigurationSection;
-import configuration.InvalidConfigurationException;
+import com.maximde.motd.configuration.Configuration;
+import com.maximde.motd.configuration.ConfigurationSection;
+import com.maximde.motd.configuration.InvalidConfigurationException;
 import org.apache.commons.lang3.Validate;
 import org.yaml.snakeyaml.DumperOptions;
 import org.yaml.snakeyaml.Yaml;

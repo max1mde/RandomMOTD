@@ -1,4 +1,4 @@
-package configuration;
+package com.maximde.motd.configuration;
 
 /**
  * Utils for casting number types to other number types

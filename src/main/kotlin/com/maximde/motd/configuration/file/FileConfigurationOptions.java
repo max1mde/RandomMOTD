@@ -1,7 +1,7 @@
-package configuration.file;
+package com.maximde.motd.configuration.file;
 
-import configuration.MemoryConfiguration;
-import configuration.MemoryConfigurationOptions;
+import com.maximde.motd.configuration.MemoryConfiguration;
+import com.maximde.motd.configuration.MemoryConfigurationOptions;
 
 /**
  * Various settings for controlling the input and output of a {@link

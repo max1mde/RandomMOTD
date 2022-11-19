@@ -1,6 +1,6 @@
-package configuration;
+package com.maximde.motd.configuration;
 
-import static configuration.NumberConversions.*;
+import static com.maximde.motd.configuration.NumberConversions.*;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

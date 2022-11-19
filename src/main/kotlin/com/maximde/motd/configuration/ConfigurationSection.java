@@ -1,4 +1,4 @@
-package configuration;
+package com.maximde.motd.configuration;
 
 import java.util.Map;
 import java.util.Set;

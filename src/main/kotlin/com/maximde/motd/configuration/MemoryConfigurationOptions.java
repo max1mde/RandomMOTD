@@ -1,4 +1,4 @@
-package configuration;
+package com.maximde.motd.configuration;
 
 /**
  * Various settings for controlling the input and output of a {@link

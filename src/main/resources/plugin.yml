@@ -1,4 +1,4 @@
 name: RandomMOTD
-version: 0.0.3
+version: 0.0.4
 main: com.maximde.motd.spigot.RandomMOTD
 author: MaximDe

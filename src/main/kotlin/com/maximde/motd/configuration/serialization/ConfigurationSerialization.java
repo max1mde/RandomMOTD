@@ -1,4 +1,4 @@
-package configuration.serialization;
+package com.maximde.motd.configuration.serialization;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;

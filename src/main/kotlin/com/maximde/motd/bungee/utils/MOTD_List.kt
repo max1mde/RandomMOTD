@@ -3,7 +3,7 @@ package com.maximde.motd.bungee.utils
 
 
 
-import configuration.file.YamlConfiguration
+import com.maximde.motd.configuration.file.YamlConfiguration
 import java.io.File
 import java.io.IOException
 

@@ -1,10 +1,10 @@
-package configuration.file;
+package com.maximde.motd.configuration.file;
 
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
-import configuration.Configuration;
-import configuration.InvalidConfigurationException;
-import configuration.MemoryConfiguration;
+import com.maximde.motd.configuration.Configuration;
+import com.maximde.motd.configuration.InvalidConfigurationException;
+import com.maximde.motd.configuration.MemoryConfiguration;
 
 import java.io.BufferedReader;
 import java.io.File;

@@ -1,4 +1,4 @@
-package configuration.serialization;
+package com.maximde.motd.configuration.serialization;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

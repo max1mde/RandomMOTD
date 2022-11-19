@@ -1,12 +1,12 @@
-package configuration.file;
+package com.maximde.motd.configuration.file;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 
-import configuration.ConfigurationSection;
-import configuration.serialization.ConfigurationSerializable;
-import configuration.serialization.ConfigurationSerialization;
+import com.maximde.motd.configuration.ConfigurationSection;
+import com.maximde.motd.configuration.serialization.ConfigurationSerializable;
+import com.maximde.motd.configuration.serialization.ConfigurationSerialization;
 import org.yaml.snakeyaml.nodes.Node;
 import org.yaml.snakeyaml.representer.Representer;
 

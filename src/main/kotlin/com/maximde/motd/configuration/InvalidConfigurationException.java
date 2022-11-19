@@ -1,4 +1,4 @@
-package configuration;
+package com.maximde.motd.configuration;
 
 /**
  * Exception thrown when attempting to load an invalid {@link Configuration}

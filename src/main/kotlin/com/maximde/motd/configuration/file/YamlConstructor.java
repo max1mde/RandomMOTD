@@ -1,9 +1,9 @@
-package configuration.file;
+package com.maximde.motd.configuration.file;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import configuration.serialization.ConfigurationSerialization;
+import com.maximde.motd.configuration.serialization.ConfigurationSerialization;
 import org.yaml.snakeyaml.nodes.Node;
 import org.yaml.snakeyaml.constructor.SafeConstructor;
 import org.yaml.snakeyaml.error.YAMLException;
