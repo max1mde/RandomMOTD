@@ -1,4 +1,4 @@
-package com.maximde.motd.utils
+package com.maximde.motd.spigot.utils
 
 import org.bukkit.configuration.file.YamlConfiguration
 import java.io.File

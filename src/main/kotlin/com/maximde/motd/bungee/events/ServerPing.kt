@@ -1,10 +1,10 @@
-package com.maximde.motd.events
+package com.maximde.motd.bungee.events
 
-import com.maximde.motd.utils.MOTD_List
-import org.bukkit.event.EventHandler
-import org.bukkit.event.EventPriority
-import org.bukkit.event.Listener
-import org.bukkit.event.server.ServerListPingEvent
+import com.maximde.motd.bungee.utils.MOTD_List
+import net.md_5.bungee.api.event.ProxyPingEvent
+import net.md_5.bungee.api.plugin.Listener
+import net.md_5.bungee.event.EventHandler
+import net.md_5.bungee.event.EventPriority
 import java.util.concurrent.ThreadLocalRandom
 
 
@@ -13,7 +13,7 @@ class ServerPing : Listener {
     var motd_list = ArrayList<String>()
 
     @EventHandler(priority = EventPriority.HIGH)
-    fun onServerPing(event: ServerListPingEvent) {
+    fun onServerPing(event: ProxyPingEvent) {
         motd_list = MOTD_List.getMOTDList()
         try {
             if(motd_list.isEmpty()) {
@@ -22,7 +22,7 @@ class ServerPing : Listener {
             val max = motd_list.size
             if(max != 0) {
                 val message: Int = ThreadLocalRandom.current().nextInt(max)
-                event.motd = motd_list[message]
+                event.response.description = motd_list[message]
             }
         } catch (ex: IndexOutOfBoundsException) {
             ex.printStackTrace()

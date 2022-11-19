@@ -1,7 +1,7 @@
-package com.maximde.motd
+package com.maximde.motd.spigot
 
-import com.maximde.motd.events.ServerPing
-import com.maximde.motd.utils.MOTD_List
+import com.maximde.motd.spigot.events.ServerPing
+import com.maximde.motd.spigot.utils.MOTD_List
 import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
 
