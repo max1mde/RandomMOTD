@@ -15,9 +15,9 @@ object MOTD_List {
 
     fun setupList() {
         if(!config.isSet("MOTD")) {
-            config.set("MOTD.1", "Example MOTD 1");
-            config.set("MOTD.2", "§cExample MOTD 2");
-            config.set("MOTD.3", "§6Example MOTD 3");
+            config.set("MOTD.1", "Example MOTD 1\\nExample Line 2");
+            config.set("MOTD.2", "§cExample MOTD 2\\nExample Line 2");
+            config.set("MOTD.3", "§6Example MOTD 3\\nExample Line 2");
             saveConfig();
         }
     }

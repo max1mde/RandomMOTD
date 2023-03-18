@@ -22,7 +22,7 @@ class ServerPing : Listener {
             val max = motd_list.size
             if(max != 0) {
                 val message: Int = ThreadLocalRandom.current().nextInt(max)
-                event.response.description = motd_list[message]
+                event.response.description = motd_list[message].replace("\\n", "\n")
             }
         } catch (ex: IndexOutOfBoundsException) {
             ex.printStackTrace()
