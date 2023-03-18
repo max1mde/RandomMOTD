@@ -8,9 +8,9 @@ You can edit, add and remove messages in the **plugins/RandomMOTD/motd-list.yml*
 ### motd-list.yml
 ```xml
 MOTD:
-  '1': Example MOTD 1
-  '2': §cExample MOTD 2
-  '3': §6Example MOTD 3
+  '1': Example MOTD 1\nExample Line 2
+  '2': §cExample MOTD 2\nExample Line 2
+  '3': §6Example MOTD 3\nExample Line 2
 ```
 
 # Setup
